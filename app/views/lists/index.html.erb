@@ -6,10 +6,7 @@
     <div class="list-cards">
       <% @lists.each do |list| %>
         <div class="list-card">
-          <% if list.photo.attached? %>
-            <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
-          <% end %>
-
+          <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
           <p><%= link_to (list.name), list_path(list) %>
           <h5><%= link_to "", list_path(list),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-trash-can" %></h5>
           </p>
