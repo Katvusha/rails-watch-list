@@ -1,12 +1,13 @@
-<div style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://gallery.yopriceville.com/var/albums/Backgrounds/Cinema_Background.jpg?m=1399676400);width: 100vw; background-size: contain">
+<div style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://gallery.yopriceville.com/var/albums/Backgrounds/Cinema_Background.jpg?m=1399676400);width: 100vw; background-size: contain">
   <div class="container">
     <h1 style="color: white">MY MOVIE LISTS</h1>
     <h5><%= link_to "Click here to add a new list", new_list_path, class: "btn btn-primary btn-lg" %></h5>
 
     <div class="list-cards">
       <% @lists.each do |list| %>
-        <div class="list-card">
-          <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="list-card"
+          style= "background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')"
+          >
           <p><%= link_to (list.name), list_path(list) %>
           <h5><%= link_to "", list_path(list),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-trash-can" %></h5>
           </p>

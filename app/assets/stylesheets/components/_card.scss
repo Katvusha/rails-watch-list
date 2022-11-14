@@ -1,21 +1,37 @@
 .list-card {
-  a {
-    text-decoration: none;
-    color: black;
+  p {
+    font-size: xx-large;
+    display: block;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: -3px;
   }
-  // display: flex;
-  border: 2px solid black;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 3px solid white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5%;
-  width: 180px;
-  padding:10px;
+
+  width: 350px;
+  height: 250px;
+  padding-top: 30px;
+
   margin-right: 50px;
   margin-top: 50px;
+
   background-color: white;
-  opacity: 60%;
 }
 
 .list-cards {
   display: flex;
   flex-wrap: wrap;
-  width: 1000px;
+  width: 1500px;
 }
