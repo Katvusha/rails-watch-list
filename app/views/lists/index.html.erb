@@ -7,7 +7,7 @@
       <% @lists.each do |list| %>
         <div class="list-card">
           <p><%= link_to (list.name), list_path(list) %>
-          <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
           <h5><%= link_to "", list_path(list),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-trash-can" %></h5>
           </p>
         </div>
